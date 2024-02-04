@@ -8,12 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-//        Car bmw = new Car();
-//        bmw.setMade("X1");
-//        bmw.setMade("bmw");
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        Car simpleCar = context.getBean(Car.class);
-        System.out.println(simpleCar.getMade()+" "+simpleCar.getModel());
+        Car car = context.getBean(Car.class);
+        car.go();
     }
 }
